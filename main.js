@@ -1,7 +1,8 @@
-const clickButton = document.querySelector("#clear")
+const numberButtons = document.querySelectorAll("[data-number]")
+const operatorButtons = document.querySelectorAll("[data-operation]")
+const equalsButton = document.querySelector("data-equals")
+const deleteButton = document.querySelector("data-delete")
+const allClearButton = document.querySelector("data-all-clear")
+const previousTextElement = document.querySelector("data-previous")
+const currentTextElement = document.querySelector("data-current")
 
-const buttonClicked = () => {
-    alert ("clicked")
-}
-
-clickButton.addEventListener ("click", clickButton)

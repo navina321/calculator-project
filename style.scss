@@ -1,9 +1,9 @@
 * {
-    background-color: white;
     margin: 0.5rem;
+    
 }
 
-.container {
+.calculator {
     height: 25rem;
     width: 22rem;
     border: 2px solid black;
@@ -11,15 +11,36 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     input {
-        justify-content: start;
+    
     }
-    .input-buttons {
+    .calculator__buttons {
         flex-basis: 25%;
-    }
+    } 
+    //<-
 }
+
+.display-output {
+width: 19.5rem;
+height: 8rem;
+background-color: slategray;
+color: whitesmoke;
+border: 2px solid black;
+border-radius: 0.5rem; 
+
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+justify-content: space-around;
+word-wrap: break-word;
+word-break: break-all;
+}
+
+
+
 input {
     height: 6rem;
     width: 20rem;
@@ -32,4 +53,8 @@ button {
     border-radius: 0.5rem;
 
     justify-content: space-evenly;
+}
+button:hover {
+    background-color: darkgray;
+    color: white;
 }
