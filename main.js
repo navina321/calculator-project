@@ -14,3 +14,17 @@ let display2 = "";
 let result = null;
 let lastOperation = "";
 let hasDecimal = false;
+
+//add event listener for inputting numbers
+numbers.forEach(number => {
+    number.addEventListener("click", (e) => {
+        //check for multiple decimal entries
+        if(e.target.innerText === "." && !hasDecimal){
+            hasDecimal = true;
+        }else if (e.target.innerText === "." &&hasDecimal) {
+            return
+        }
+        display2 += e.target.innerText;
+        displayTwo.innerText = display2
+    })
+});

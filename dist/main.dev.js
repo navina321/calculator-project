@@ -13,4 +13,18 @@ var display1 = "";
 var display2 = "";
 var result = null;
 var lastOperation = "";
-var hasDecimal = false;
+var hasDecimal = false; //add event listener for inputting numbers
+
+numbers.forEach(function (number) {
+  number.addEventListener("click", function (e) {
+    //check for multiple decimal entries
+    if (e.target.innerText === "." && !hasDecimal) {
+      hasDecimal = true;
+    } else if (e.target.innerText === "." && hasDecimal) {
+      return;
+    }
+
+    display2 += e.target.innerText;
+    displayTwo.innerText = display2;
+  });
+});
