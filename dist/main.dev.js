@@ -23,7 +23,7 @@ var clearVariable = function clearVariable(nameOfOp) {
 
 
 var mathOperation = function mathOperation() {
-  if (lastOperation === "X") {
+  if (lastOperation === "x") {
     result = parseFloat(result) * parseFloat(display2);
   } else if (lastOperation === "+") {
     result = parseFloat(result) + parseFloat(display2);
