@@ -72,7 +72,7 @@ equals.addEventListener("click", () => {
     if(!display1 || !display2) return;
     hasDecimal = false;
     mathOperation();
-    clearVariable();
+    clearVariable("=");
     displayTwo.innerText = result;
     display2 = result;
     display1 = "";

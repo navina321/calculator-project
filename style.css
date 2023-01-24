@@ -5,13 +5,18 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 .calculator {
   height: 25rem;
   width: 20rem;
   border: 2px solid black;
   border-radius: 0.5rem;
   background-color: aliceblue;
-  margin-top: 7.5rem;
+  margin-top: 6.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +24,7 @@
 }
 
 .calculator__display {
-  width: 18rem;
+  width: 15rem;
   height: 7rem;
   background-color: slategray;
   color: whitesmoke;
@@ -47,7 +52,6 @@
   background-color: lightgray;
   display: inline-block;
   height: 2.5rem;
-  width: 4rem;
   margin: 0.25rem;
   display: flex;
   justify-content: center;
