@@ -14,10 +14,11 @@
  .calculator {
     height: 25rem;
     width: 20rem;
-    border: 2px solid black;
+    border: 2px solid darkslategray;
     border-radius: 0.5rem;
     background-color: aliceblue;
     margin-top: 6.5rem;
+    box-shadow: 4px 4px darkslategray;
 
     display: flex;
     flex-direction: column;
@@ -54,6 +55,7 @@
     background-color:lightgray;
     display: inline-block;
     height: 2.5rem;
+    box-shadow: 3px 3px gray;
 
     margin: 0.25rem;
     display: flex;
