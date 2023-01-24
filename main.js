@@ -33,3 +33,61 @@ const mathOperation = () => {
         result = parseFloat(result) / parseFloat(display2);
     } 
 };
+
+
+//add event listener for entering numbers
+numbers.forEach(number => {
+    number.addEventListener("click", (e) => {
+        //check for multiple decimal entries
+        if(e.target.innerText === "." && !hasDecimal){
+            hasDecimal = true;
+        }else if (e.target.innerText === "." &&hasDecimal) {
+            return
+        }
+        display2 += e.target.innerText;
+        displayTwo.innerText = display2
+    })
+});
+
+//add event listener for using operations
+operation.forEach (operation => {
+    operation.addEventListener("click", (e) => {
+        if (!display2) result;
+        //allow decimal for 2nd/3rd etc. inputs
+        hasDecimal = false;
+
+        const nameOfOperation = e.target.innerText;
+        if (display1 && display2 && lastOperation) {
+            mathOperation();
+        } else {
+            result = parseFloat(display2)
+        }
+        clearVariable(nameOfOperation);
+        lastOperation = nameOfOperation;
+    })
+})
+
+//add event listener for using equals button
+equals.addEventListener("click", () => {
+    if(!display1 || !display2) return;
+    hasDecimal = false;
+    mathOperation();
+    clearVariable();
+    displayTwo.innerText = result;
+    display2 = result;
+    display1 = "";
+});
+
+// event listener for using all clear button
+clearAll.addEventListener("click", () => {
+    displayOne.innerText = "0";
+    displayTwo.innerText = "0";
+    display1 = "";
+    display2 = "";
+});
+
+//event listener for using delete button
+deleteLast.addEventListener("click", () => {
+    display2 = display2.slice(0, -1);
+    displayTwo.innerText = display2;
+})
